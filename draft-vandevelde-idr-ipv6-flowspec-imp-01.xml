@@ -3,7 +3,7 @@
 <!-- One method to get references from the online citation libraries.
      There has to be one entity for each item to be referenced. 
      An alternate method (rfc include) is described in the references. -->
-<!ENTITY I-D.draft-ietf-idr-flow-spec-v6 SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-ietf-idr-flow-spec-v6-05.xml">
+<!ENTITY I-D.draft-ietf-idr-flow-spec-v6 SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-ietf-idr-flow-spec-v6-06.xml">
 ]>
 <?rfc comments="yes"?>
 <?rfc compact="no"?>
@@ -16,7 +16,7 @@
 <?rfc tocindent="yes"?>
 <?rfc tocompact="yes"?>
 
-<rfc category="info" docName="draft-vandevelde-idr-ipv6-flowspec-imp-00"
+<rfc category="info" docName="draft-vandevelde-idr-ipv6-flowspec-imp-01"
      ipr="trust200902">
 
   <front>
