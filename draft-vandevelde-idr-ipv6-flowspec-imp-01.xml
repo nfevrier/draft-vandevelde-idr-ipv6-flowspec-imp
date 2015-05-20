@@ -23,6 +23,36 @@
 
     <title abbrev="">Dissemination of Flow Specification Rules for IPv6 Implementation Report</title>
 
+    <author fullname="Gunter Van de Velde" initials="G."
+            surname="Van de Velde">
+      <organization>Alcatel-Lucent</organization>
+      <address>
+        <postal>
+          <street>Copernicuslaan 50</street>
+          <city>Antwerpen</city>
+          <country>Belgium</country>
+          <code>2018</code>
+        </postal>
+        <phone></phone>
+        <email>gunter.van_de_velde@alcatel-lucent.com</email>
+      </address>
+    </author>
+
+    <author fullname="Wim Henderickx" initials="W."
+            surname="Henderickx">
+      <organization>Alcatel-Lucent</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city></city>
+          <country></country>
+          <code></code>
+        </postal>
+        <phone></phone>
+        <email>wim.henderickx@alcatel-lucent.be</email>
+      </address>
+    </author>
+	
     <author fullname="Nicolas Fevrier" initials="N."
             surname="Fevrier">
       <organization>Cisco Systems</organization>
@@ -51,36 +81,6 @@
         </postal>
         <phone></phone>
         <email>akarch@cisco.com</email>
-      </address>
-    </author>
-
-    <author fullname="Gunter Van de Velde" initials="G."
-            surname="Van de Velde">
-      <organization>Alcatel-Lucent</organization>
-      <address>
-        <postal>
-          <street>Copernicuslaan 50</street>
-          <city>Antwerpen</city>
-          <country>Belgium</country>
-          <code>2547</code>
-        </postal>
-        <phone></phone>
-        <email>gunter.van_de_velde@alcatel-lucent.com</email>
-      </address>
-    </author>
-
-    <author fullname="Wim Henderickx" initials="W."
-            surname="Henderickx">
-      <organization>Alcatel-Lucent</organization>
-      <address>
-        <postal>
-          <street></street>
-          <city></city>
-          <country></country>
-          <code></code>
-        </postal>
-        <phone></phone>
-        <email>wim.henderickx@alcatel-lucent.be</email>
       </address>
     </author>
 
