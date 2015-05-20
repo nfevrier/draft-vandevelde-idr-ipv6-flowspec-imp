@@ -28,7 +28,7 @@
       <organization>Cisco Systems</organization>
       <address>
         <postal>
-          <street>11 Rue Camille Desmoulins, 92130 Issy-les-Moulineaux, France</street>
+          <street>11 Rue Camille Desmoulins</street>
           <city>Issy-les-Koulineaux</city>
           <country>France</country>
           <code>92130</code>
@@ -85,7 +85,7 @@
     </author>
 
 
-    <date month="October" year="2014" />
+    <date month="May" year="2015" />
 
     <area>Routing</area>
 
