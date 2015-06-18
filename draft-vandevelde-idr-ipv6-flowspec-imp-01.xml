@@ -492,7 +492,7 @@ Jun 12 15:37:57.990517 BGP RECV flags 0xc0 code Extended Communities(16): <snip>
 			 </t>
 
 			 <t>The following IPv6 Flow Specification NLRI is constructed 
-			 using the Cisco router as IPv6 Flow Specification controller:
+			 using the Juniper router as IPv6 Flow Specification controller:
 	         </t>
 
 	     <figure>
