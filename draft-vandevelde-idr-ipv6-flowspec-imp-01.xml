@@ -181,7 +181,7 @@
 		     <t>N10: Type 10 - Packet length</t>
 		     <t>N11: Type 11 - DSCP (Diffserv Code Point)</t>
 		     <t>N12: Type 12 - Fragment</t>
-			 <t>N13: Type 13 - Flow Label</t>
+		     <t>N13: Type 13 - Flow Label</t>
 			 <t>E1:  Extended Community - traffic-rate</t>
 			 <t>E2:  Extended Community - traffic-action</t>
 			 <t>E3:  Extended Community - redirect</t>
@@ -192,44 +192,44 @@
      <figure>
          <artwork>
 
-                     +--------+--------+-------+-----+
-                     |        | Cisco  |  ALU  | TBD |
-                     +--------+--------+-------+-----+
-                     | Rcv.N1 |   YES  |  YES  | --- |
-                     | Snd.N1 |   YES  |  YES  | --- |
-                     | Rcv.N2 |   YES  |  YES  | --- |
-                     | Snd.N2 |   YES  |  YES  | --- |
-                     | Rcv.N3 |   YES  |  YES  | --- |
-                     | Snd.N3 |   YES  |  YES  | --- |
-                     | Rcv.N4 |   YES  |  YES  | --- |
-                     | Snd.N4 |   YES  |  YES  | --- |
-                     | Rcv.N5 |   YES  |  YES  | --- |
-                     | Snd.N5 |   YES  |  YES  | --- |
-                     | Rcv.N6 |   YES  |  YES  | --- |
-                     | Snd.N6 |   YES  |  YES  | --- |
-                     | Rcv.N7 |   YES  |  YES  | --- |
-                     | Snd.N7 |   YES  |  YES  | --- |
-                     | Rcv.N8 |   YES  |  YES  | --- |
-                     | Snd.N8 |   YES  |  YES  | --- |
-                     | Rcv.N9 |   YES  |  YES  | --- |
-                     | Snd.N9 |   YES  |  YES  | --- |
-                     | Rcv.N10|   YES  |  YES  | --- |
-                     | Snd.N10|   YES  |  YES  | --- |
-                     | Rcv.N11|   YES  |  YES  | --- |
-                     | Snd.N11|   YES  |  YES  | --- |
-                     | Rcv.N12|   YES  |  YES  | --- |
-                     | Snd.N12|   YES  |  YES  | --- |
-                     | Rcv.N13|   YES  |  YES  | --- |
-                     | Snd.N13|   YES  |  YES  | --- |
-                     | Rcv.E1 |   YES  |  YES  | --- |
-                     | Snd.E1 |   YES  |  YES  | --- |
-                     | Rcv.E2 |   YES  |  YES  | --- |
-                     | Snd.E2 |   YES  |  YES  | --- |
-                     | Rcv.E3 |   YES  |  YES  | --- |
-                     | Snd.E3 |   YES  |  YES  | --- |
-                     | Rcv.E4 |   YES  |  YES  | --- |
-                     | Snd.E4 |   YES  |  YES  | --- |
-                     +--------+--------+-------+-----+
+                     +--------+--------+-------+---------+
+                     |        | Cisco  |  ALU  | Juniper |
+                     +--------+--------+-------+---------+
+                     | Rcv.N1 |   YES  |  YES  |   YES   |
+                     | Snd.N1 |   YES  |  YES  |   YES   |
+                     | Rcv.N2 |   YES  |  YES  |   YES   |
+                     | Snd.N2 |   YES  |  YES  |   YES   |
+                     | Rcv.N3 |   YES  |  YES  |   YES   |
+                     | Snd.N3 |   YES  |  YES  |   YES   |
+                     | Rcv.N4 |   YES  |  YES  |   YES   |
+                     | Snd.N4 |   YES  |  YES  |   YES   |
+                     | Rcv.N5 |   YES  |  YES  |   YES   |
+                     | Snd.N5 |   YES  |  YES  |   YES   |
+                     | Rcv.N6 |   YES  |  YES  |   YES   |
+                     | Snd.N6 |   YES  |  YES  |   YES   |
+                     | Rcv.N7 |   YES  |  YES  |   YES   |
+                     | Snd.N7 |   YES  |  YES  |   YES   |
+                     | Rcv.N8 |   YES  |  YES  |   YES   |
+                     | Snd.N8 |   YES  |  YES  |   YES   |
+                     | Rcv.N9 |   YES  |  YES  |   YES   |
+                     | Snd.N9 |   YES  |  YES  |   YES   |
+                     | Rcv.N10|   YES  |  YES  |   YES   |
+                     | Snd.N10|   YES  |  YES  |   YES   |
+                     | Rcv.N11|   YES  |  YES  |   YES   |
+                     | Snd.N11|   YES  |  YES  |   YES   |
+                     | Rcv.N12|   YES  |  YES  |   YES   |
+                     | Snd.N12|   YES  |  YES  |   YES   |
+                     | Rcv.N13|   ---  |  ---  |   ---   |
+                     | Snd.N13|   ---  |  ---  |   ---   |
+                     | Rcv.E1 |   YES  |  YES  |   YES   |
+                     | Snd.E1 |   YES  |  YES  |   YES   |
+                     | Rcv.E2 |   YES  |  YES  |   YES   |
+                     | Snd.E2 |   YES  |  YES  |   YES   |
+                     | Rcv.E3 |   YES  |  YES  |   YES   |
+                     | Snd.E3 |   YES  |  YES  |   YES   |
+                     | Rcv.E4 |   YES  |  YES  |   YES   |
+                     | Snd.E4 |   YES  |  YES  |   YES   |
+                     +--------+--------+-------+---------+
 	  
          </artwork>
      </figure>
@@ -244,6 +244,10 @@
 		     <t>Snd: BGP speaker can not relay the information from the BGP process</t>
          </list> </t>	 
 
+		 <t>---<list style="symbols">
+             <t>Rcv: Not tested</t>
+		     <t>Snd: Not tested</t>
+         </list> </t>
 	 
      </section>
 
@@ -252,8 +256,8 @@
          <t>Summary of executed Interop tests between different implementations
 		 </t>
 		 
-         <section title="Alcatel-Lucent - Cisco Systems">
-             <t>This Interop test was between a Cisco IOS-XR router and a 
+         <section title="Cisco Systems - Alcatel-Lucent">
+             <t>This Interop test was between a Cisco router and a 
 			 Alcatel-Lucent Router. Between the two BGP devices an iBGP 
 			 session is established. 
 			 </t>
@@ -276,19 +280,26 @@
              match dscp 1-10 11-20 22-30 32-40 52-60
              match tcp-flag 240 any
              match protocol 6-71 73-80 85-90 95-105 110-115
+             match fragment-type  first-fragment
              end-class-map
+             !
             !
-            policy-map type pbr InteropCiscoAlu
+            policy-map type pbr InteropPolicy
              class type traffic InteropMatchList
               police rate 200 bps
-              !
-              redirect nexthop 2001::1
-              set dscp 45
              !
-             class type traffic class-default
-             !
-             end-policy-map
-	  
+             redirect nexthop 2001::1
+             set dscp 45
+            !
+            class type traffic class-default
+           !
+           end-policy-map
+          !
+         flowspec
+          address-family ipv6
+           service-policy type pbr InteropPolicy
+          !
+         !
              </artwork>
          </figure>
 			 
@@ -298,15 +309,15 @@
 
          <figure>
              <artwork>
-			 AFI: IPv6
-              NLRI (Hex dump) :       
-			 0x018000200100020000000000000000000000030280002002000200000000000
-			 00000000000030303064547034945500355455a035f4569036ec5730503014505
-			 0307450b030d451203144519031bc51f06032145250327452b032d45320335453
-			 a033cc5410781230881370980f00a037845820387458c039145a003a545c803cd
-			 c5e10b0301450a030b45140316451e032045280334c53c
-              Actions       :Traffic-rate: 200 bps DSCP: 45 
-			    Nexthop: 2001::1  (policy.1.test1)
+             	AFI: IPv6
+             NLRI (Hex dump) :
+             		0x0180002001000200000000000000000000000302800020020002000000000000
+             		0000000000030303064547034945500355455a035f4569036ec573050301450503
+             		07450b030d451203144519031bc51f06032145250327452b032d45320335453a03
+             		3cc5410781230881370980f00a037845820387458c039145a003a545c803cdc5e1
+             		0b0301450a030b45140316451e032045280334c53c0c8104
+             Actions       :Traffic-rate: 200 bps DSCP: 45 
+             		Nexthop: 2001::1  (policy.1.InteropPolicy.InteropMatchList)
 			 </artwork>
          </figure>
 		 
@@ -317,15 +328,15 @@
  
          <figure>
              <artwork><![CDATA[ 
-*A:PE26>config>service>vprn>sub-if>grp-if>sap>static-host# show router 117 bgp 
-routes flow-ipv6 
+*A:PE26>show>router>bgp# routes flow-ipv6 
 ===============================================================================
  BGP Router ID:195.207.5.200    AS:65117       Local AS:65117      
 ===============================================================================
  Legend -
  Status codes  : u - used, s - suppressed, h - history, d - decayed, * - valid
- Origin codes  : i - IGP, e - EGP, ? - incomplete, > - best, b - backup
- 
+                 l - leaked, x - stale, > - best, b - backup
+ Origin codes  : i - IGP, e - EGP, ? - incomplete
+
 ===============================================================================
 BGP FLOW IPV6 Routes
 ===============================================================================
@@ -335,9 +346,9 @@ Flag  Network             Nexthop                 LocalPref       MED
 u*>i  --                  2001::1                 100             None
       No As-Path
                                                                   
-      Community Action:    ext:800:0                              
-      Community Action:    rate-limit: 65117:110*                 
-      Community Action:    mark-dscp: 45                          
+      Community Action:  ext:800:0
+      Community Action:  rate-limit: 65117:1103626240
+      Community Action:  mark-dscp: 45
       NLRI Subcomponents:                                         
       Dest Pref : 2001:2::3/128 offset 0
       Src Pref  : 2002:2::3/128 offset 0
@@ -349,13 +360,208 @@ u*>i  --                  2001::1                 100             None
       TCP Flags : [ 240 ]
       TCP Flags : [ 240 ]
       DSCP      : [ >= 1 ] and [ <= 10 ] or [ >= 11 ] and [ <= 20 ] or [ >= 
+      Frag      : [ == 4 ]
 -------------------------------------------------------------------------------
 Routes : 1
+===============================================================================
  			 ]]></artwork>
          </figure>
+		 </section>
+   
+            <section title="Cisco Systems - Juniper Networks">
+             <t>This Interop test was between a Cisco router and a 
+			 Juniper Router. Between the two BGP devices an iBGP session
+			 is established. 
+			 </t>
+
+			 <t>The following IPv6 Flow Specification NLRI is constructed 
+			 using the Cisco router as IPv6 Flow Specification controller:
+	         </t>
+
+	     <figure>
+             <artwork>
+            !
+            class-map type traffic match-all InteropMatchList
+             match destination-address ipv6 2001:2::3/128
+             match source-address ipv6 2002:2::3/128
+             match destination-port 1-5 7-11 13-18 20-25 27-31
+             match source-port 33-37 39-43 45-50 53-58 60-65
+             match ipv6 icmp-type 35
+             match ipv6 icmp-code 55
+             match packet length 120-130 135-140 145-160 165-200 205-225
+             match dscp 1-10 11-20 22-30 32-40 52-60
+             match tcp-flag 240 any
+             match protocol 6-71 73-80 85-90 95-105 110-115
+             match fragment-type  first-fragment
+             end-class-map
+             !
+            !
+            policy-map type pbr InteropPolicy
+             class type traffic InteropMatchList
+              police rate 200 bps
+             !
+             redirect nexthop 2001::1
+             set dscp 45
+            !
+            class type traffic class-default
+           !
+           end-policy-map
+          !
+         flowspec
+          address-family ipv6
+           service-policy type pbr InteropPolicy
+          !
+         !
+             </artwork>
+         </figure>
+			 
+         <t>This results with the following Flow Specification Extended
+		 communities and IPv6 Flow Specification NLRI:
+		 </t>
+
+         <figure>
+             <artwork>
+             	AFI: IPv6
+             NLRI (Hex dump) :
+             		0x0180002001000200000000000000000000000302800020020002000000000000
+             		0000000000030303064547034945500355455a035f4569036ec573050301450503
+             		07450b030d451203144519031bc51f06032145250327452b032d45320335453a03
+             		3cc5410781230881370980f00a037845820387458c039145a003a545c803cdc5e1
+             		0b0301450a030b45140316451e032045280334c53c0c8104
+             Actions       :Traffic-rate: 200 bps DSCP: 45 
+             		Nexthop: 2001::1  (policy.1.InteropPolicy.InteropMatchList)
+			 </artwork>
+         </figure>
+		 
+		 <t>The above IPv6 Flow Specification rule is correctly received by 
+		 the Juniper BGP speaker and is reflected as follows on the 
+		 device:
+		 </t>
+ 
+         <figure>
+             <artwork><![CDATA[ 
+
+root@sdn-st-mx480-b> show route table inet6flow.0 extensive
+
+inet6flow.0: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
+2001:2::3/128,2002:2::3/128,proto>=6&<=71,>=73&<=80,>=85&<=90,>=95&<=105,>=110&<=115,
+dstport>=1&<=5,>=7&<=11,>=13&<=18,>=20&<=25,>=27&<=31,
+srcport>=33&<=37,>=39&<=43,>=45&<=50,>=53&<=58,>=60&<=65,icmp6-type=35,icmp6-code=55,
+tcp-flag:f0,len>=120&<=130,>=135&<=140,>=145&<=160,>=165&<=200,>=205&<=225,
+dscp>=1&<=10,>=11&<=20,>=22&<=30,>=32&<=40,>=52&<=60,frag=04/term:N/A 
+(1 entry, 0 announced)
+        *BGP    Preference: 170/-101
+                Next hop type: Fictitious, Next hop index: 0
+                Address: 0x95542a4
+                Next-hop reference count: 2
+                State: <Active Int Ext>
+                Local AS: 65117 Peer AS: 65117
+                Age: 1:58
+                Validation State: unverified
+                Task: BGP_65117.10.0.0.2
+                AS path: I
+                Communities: unknown iana 800 traffic-rate:65117:25 traffic-marking:45
+                Accepted
+                Localpref: 100
+                Router ID: 10.0.0.2
+
+Jun 12 15:37:57.990156 BGP RECV 10.0.0.2+179 -> 10.0.0.1+58360
+Jun 12 15:37:57.990202 BGP RECV message type 2 (Update) length 245
+Jun 12 15:37:57.990228 BGP RECV Update PDU length 245
+Jun 12 15:37:57.990260 BGP RECV flags 0x90 code MP_reach(14): AFI/SAFI 2/133
+Jun 12 15:37:57.990287 -akg- nhlen from packet : 16
+Jun 12 15:37:57.990316 BGP RECV         nhop zero-len len 16
+Jun 12 15:37:57.990388 BGP RECV         2001:2::3/128,2002:2::3/128,proto>=6&<=71,>=73&<=80,
+>=85&<=90,>=95&<=105,>=110&<=115,dstport>=1&<=5,>=7&<=11,>=13&<=18,>=20&<=25,>=27&<=31,
+srcport>=33&<=37,>=39&<=43,>=45&<=50,>=53&<=58,>=60&<=65,icmp6-type=35,icmp6-code=55,
+tcp-flag:f0,len>=120&<=130,>=135&<=140,>=145&<=160,>=165&<=200,>=205&<=225,
+dscp>=1&<=10,>=11&<=20,>=22&<=30,>=32&<=40,>=52&<=60,frag=04/1240
+Jun 12 15:37:57.990418 BGP RECV flags 0x40 code Origin(1): IGP
+Jun 12 15:37:57.990446 BGP RECV flags 0x40 code ASPath(2) length 0: <null>
+Jun 12 15:37:57.990471 BGP RECV flags 0x40 code LocalPref(5): 100
+Jun 12 15:37:57.990517 BGP RECV flags 0xc0 code Extended Communities(16): <snip>
+
+ 			 ]]></artwork>
+         </figure>
+		 </section>
+   
+               <section title="Juniper Networks - Cisco Systems">
+             <t>This Interop test was between a Juniper router and a 
+			 Cisco Router. Between the two BGP devices an iBGP session
+			 is established. 
+			 </t>
+
+			 <t>The following IPv6 Flow Specification NLRI is constructed 
+			 using the Cisco router as IPv6 Flow Specification controller:
+	         </t>
+
+	     <figure>
+             <artwork>
+            !
+root@sdn-st-mx480-b# show routing-options
+rib inet6.0 {
+    flow {
+        route flowroute {
+            match {
+                destination abcd::1/128;
+                source abcd::2/128;
+                protocol [ 6-71 73-80 85-90 95-105 110-115 ];
+                destination-port [ 1-5 7-11 13-18 20-25 27-31 ];
+                source-port [ 33-37 39-43 45-50 53-58 60-65 ];
+                icmp6-type 35;
+                icmp6-code 55;
+                tcp-flags 240;
+                packet-length [ 120-130 135-140 145-160 165-200 205-225 ];
+                dscp [ 1-10 11-20 22-30 32-40 52-60 ];
+                fragment first-fragment;
+            }
+            then {
+                rate-limit 9600;
+                mark 45;
+            }
+        }
+    }
+}
+             </artwork>
+         </figure>
+			 
+
+		 <t>The above IPv6 Flow Specification rule is correctly received by 
+		 the Cisco BGP speaker and is reflected as follows on the 
+		 device:
+		 </t>
+ 
+         <figure>
+             <artwork><![CDATA[ 
 
 
-   		 
+RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#sh flowspec ipv6 detail
+
+AFI: IPv6
+ Flow           :Dest:abcd::1/0-128,Source:abcd::2/0-128,
+ NH:>=6&<=71|>=73&<=80|>=85&<=90|>=95&<=105|>=110&<=115,
+ DPort:>=1&<=5|>=7&<=11|>=13&<=18|>=20&<=25|>=27&<=31,
+ SPort:>=33&<=37|>=39&<=43|>=45&<=50|>=53&<=58|>=60&<=65,ICMPType:=35,ICMPCode:=55,
+ TCPFlags:~0xf0,Length:>=120&<=130|>=135&<=140|>=145&<=160|>=165&<=200|>=205&<=225,
+ DSCP:>=1&<=10|>=11&<=20|>=22&<=30|>=32&<=40|>=52&<=60,Frag:~FF
+  Actions       :Traffic-rate: 9600 bps DSCP: 45  (bgp.1)
+  Statistics                        (packets/bytes)
+   Matched             :                   0/0
+   Dropped             :                   0/0
+   
+RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#sh flowspec ipv6 nlri
+
+AFI: IPv6
+NLRI (Hex dump) :       
+0x018000abcd0000000000000000000000000001028000abcd000000000000000000000000000203030645
+47034945500355455a035f4569036ec57305030145050307450b030d451203144519031bc51f0603214525
+0327452b032d45320335453a033cc5410781230881370980f00a037845820387458c039145a003a545c803
+cdc5e10b0301450a030b45140316451e032045280334c53c0c8004
+  Actions       :Traffic-rate: 9600 bps DSCP: 45  (bgp.1)
+RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#
+
+ 			 ]]></artwork>
+         </figure>
 		 </section>
    
      </section>
@@ -387,8 +593,8 @@ Routes : 1
     </section>
 
     <section anchor="Acknowledgements" title="Acknowledgements">
-         <t>The authors would like to thank Hyojeong Kim, Bertrand Duvivier 
-			 and Adam Simpson.
+         <t>The authors would like to thank Hyojeong Kim, Bertrand Duvivier,  R. Divya,
+			 Ashutosh Grewal and Adam Simpson.
 	     </t>
     </section>
 
