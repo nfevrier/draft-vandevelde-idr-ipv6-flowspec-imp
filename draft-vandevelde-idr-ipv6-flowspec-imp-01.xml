@@ -219,8 +219,8 @@
                      | Snd.N11|   YES  |  YES  |   YES   |
                      | Rcv.N12|   YES  |  YES  |   YES   |
                      | Snd.N12|   YES  |  YES  |   YES   |
-                     | Rcv.N13|   ---  |  ---  |   ---   |
-                     | Snd.N13|   ---  |  ---  |   ---   |
+                     | Rcv.N13|   YES  |  YES  |   YES   |
+                     | Snd.N13|   YES  |  YES  |   YES   |
                      | Rcv.E1 |   YES  |  YES  |   YES   |
                      | Snd.E1 |   YES  |  YES  |   YES   |
                      | Rcv.E2 |   YES  |  YES  |   YES   |
@@ -243,11 +243,6 @@
              <t>Rcv: BGP speaker can not receive the information into the BGP process</t>
 		     <t>Snd: BGP speaker can not relay the information from the BGP process</t>
          </list> </t>	 
-
-		 <t>---<list style="symbols">
-             <t>Rcv: Not tested</t>
-		     <t>Snd: Not tested</t>
-         </list> </t>
 	 
      </section>
 
@@ -514,6 +509,7 @@ rib inet6.0 {
                 packet-length [ 120-130 135-140 145-160 165-200 205-225 ];
                 dscp [ 1-10 11-20 22-30 32-40 52-60 ];
                 fragment first-fragment;
+                flow-label [ ( 22 || 77 ) 11 33 89 ];
             }
             then {
                 rate-limit 9600;
@@ -543,21 +539,23 @@ AFI: IPv6
  DPort:>=1&<=5|>=7&<=11|>=13&<=18|>=20&<=25|>=27&<=31,
  SPort:>=33&<=37|>=39&<=43|>=45&<=50|>=53&<=58|>=60&<=65,ICMPType:=35,ICMPCode:=55,
  TCPFlags:~0xf0,Length:>=120&<=130|>=135&<=140|>=145&<=160|>=165&<=200|>=205&<=225,
- DSCP:>=1&<=10|>=11&<=20|>=22&<=30|>=32&<=40|>=52&<=60,Frag:~FF
+ DSCP:>=1&<=10|>=11&<=20|>=22&<=30|>=32&<=40|>=52&<=60,Frag:~FF,
+ FlowLabel:=22|=77|=11|=33|=89
   Actions       :Traffic-rate: 9600 bps DSCP: 45  (bgp.1)
   Statistics                        (packets/bytes)
    Matched             :                   0/0
-   Dropped             :                   0/0
-   
+   Dropped             :                   0/0   
+
 RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#sh flowspec ipv6 nlri
 
 AFI: IPv6
-NLRI (Hex dump) :       
-0x018000abcd0000000000000000000000000001028000abcd000000000000000000000000000203030645
-47034945500355455a035f4569036ec57305030145050307450b030d451203144519031bc51f0603214525
-0327452b032d45320335453a033cc5410781230881370980f00a037845820387458c039145a003a545c803
-cdc5e10b0301450a030b45140316451e032045280334c53c0c8004
+ NLRI (Hex dump) :       0x018000abcd0000000000000000000000000001028000abcd0000000000
+ 0000000000000000020303064547034945500355455a035f4569036ec57305030145050307450b030d45
+ 1203144519031bc51f06032145250327452b032d45320335453a033cc5410781230881370980f00a0378
+ 45820387458c039145a003a545c803cdc5e10b0301450a030b45140316451e032045280334c53c0c8004
+ 0d0116014d010b01218159
   Actions       :Traffic-rate: 9600 bps DSCP: 45  (bgp.1)
+  
 RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#
 
  			 ]]></artwork>
