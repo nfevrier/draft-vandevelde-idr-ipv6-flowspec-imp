@@ -161,7 +161,7 @@
              Name: Nicolas Fevrier
              Email: nifevrie@cisco.com
              Vendor: Cisco Systems, Inc.
-             Release: IOS-XR
+             Release: IOS-XR 5.3.1
              Protocol Role: Sender, Receiver
 
          Alcatel-Lucent
@@ -169,6 +169,13 @@
              Email: wim.henderickx@alcatel-lucent.com
              Vendor: Alcatel-Lucent, Inc.
              Release: R12R4
+             Protocol Role: Sender, Receiver
+             
+         Juniper
+             Name: Ashutosh Grewal
+             Email: agrewal@juniper.net
+             Vendor: Juniper Networks, Inc.
+             Release: JunOS 15.2
              Protocol Role: Sender, Receiver
              ]]></artwork>
       </figure>
