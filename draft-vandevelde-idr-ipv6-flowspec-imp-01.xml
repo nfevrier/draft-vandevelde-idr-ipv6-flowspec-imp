@@ -613,14 +613,14 @@ RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#
 
     <section anchor="Acknowledgements" title="Acknowledgements">
          <t>The authors would like to thank Hyojeong Kim, Bertrand Duvivier,  R. Divya,
-			 Ashutosh Grewal and Adam Simpson.
+			 and Adam Simpson.
 	     </t>
     </section>
 
     <section anchor="log" title="Change Log">
          <t><list style="hanging">
          <t hangText="Initial Version:">8 October 2014</t>
-		 <t hangText="-01 Version:">20 May 2015</t>
+		 <t hangText="-02 Version:">2 July 2015</t>
 	     </list></t>
     </section>
 
