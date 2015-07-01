@@ -68,7 +68,6 @@
       </address>
     </author>
 
-
     <author fullname="Andy Karch" initials="A."
             surname="Karch">
       <organization>Cisco Systems</organization>
@@ -190,9 +189,9 @@
 		 </t>
 	 
 	     <t><list style="symbols">
-             <t>N1:  Type 1 - Destination IPv6 Prefix</t>
-		     <t>N2:  Type 2 - Source IPv6 Prefix</t>
-		     <t>N3:  Type 3 - Next Header</t>
+             <t>N1: Type 1 - Destination IPv6 Prefix</t>
+		     <t>N2: Type 2 - Source IPv6 Prefix</t>
+		     <t>N3: Type 3 - Next Header</t>
 		     <t>N4: Type 4 - Port</t>
 		     <t>N5: Type 5 - Destination port</t>
 		     <t>N6: Type 6 - Source port</t>
@@ -203,10 +202,10 @@
 		     <t>N11: Type 11 - DSCP (Diffserv Code Point)</t>
 		     <t>N12: Type 12 - Fragment</t>
 		     <t>N13: Type 13 - Flow Label</t>
-			 <t>E1:  Extended Community - traffic-rate</t>
-			 <t>E2:  Extended Community - traffic-action</t>
-			 <t>E3:  Extended Community - redirect</t>
-			 <t>E4:  Extended Community - traffic-marking</t>
+			 <t>E1: Extended Community - traffic-rate</t>
+			 <t>E2: Extended Community - traffic-action</t>
+			 <t>E3: Extended Community - redirect</t>
+			 <t>E4: Extended Community - traffic-marking</t>
          </list> </t>
 		
 		
@@ -274,7 +273,7 @@
 		 
          <section title="Cisco Systems - Alcatel-Lucent">
              <t>This Interop test was between a Cisco router and a 
-			 Alcatel-Lucent Router. Between the two BGP devices an iBGP 
+			 Alcatel-Lucent router. Between the two BGP devices an iBGP 
 			 session is established. 
 			 </t>
 
@@ -386,7 +385,7 @@ Routes : 1
    
             <section title="Cisco Systems - Juniper Networks">
              <t>This Interop test was between a Cisco router and a 
-			 Juniper Router. Between the two BGP devices an iBGP session
+			 Juniper router. Between the two BGP devices an iBGP session
 			 is established. 
 			 </t>
 
@@ -503,7 +502,7 @@ Jun 12 15:37:57.990517 BGP RECV flags 0xc0 code Extended Communities(16): <snip>
    
                <section title="Juniper Networks - Cisco Systems">
              <t>This Interop test was between a Juniper router and a 
-			 Cisco Router. Between the two BGP devices an iBGP session
+			 Cisco router. Between the two BGP devices an iBGP session
 			 is established. 
 			 </t>
 
@@ -612,7 +611,7 @@ RP/0/RSP0/CPU0:ASR9k-FlowSpec-Interop#
     </section>
 
     <section anchor="Acknowledgements" title="Acknowledgements">
-         <t>The authors would like to thank Hyojeong Kim, Bertrand Duvivier,  R. Divya,
+         <t>The authors would like to thank Hyojeong Kim, Bertrand Duvivier, R. Divya,
 			 and Adam Simpson.
 	     </t>
     </section>
